@@ -115,7 +115,7 @@ var update_userscript_strings = function(newstrings) {
 	}
 
 	var stringified = JSON.stringify(strings_json, null, "\t").replace(/\n/g, "\n\t");
-	stringified = util.json_escape_unicode(stringified);
+	stringified = stringified;
 
 	userscript = userscript.replace(strings_regex, "$1" + stringified + "$3");
 
@@ -136,7 +136,7 @@ var update_userscript_supported_languages = function(supported_languages) {
 	util.sort_by_array(supported_languages, ["en"]);
 
 	var stringified = JSON.stringify(supported_languages, null, "\t").replace(/\n/g, "\n\t");
-	stringified = util.json_escape_unicode(stringified);
+	stringified = stringified;
 
 	userscript = userscript.replace(strings_regex, "$1" + stringified + "$3");
 
